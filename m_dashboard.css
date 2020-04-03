@@ -109,7 +109,7 @@ body{
 	text-align: center;
 	position: fixed;
 	text-shadow: 1.5px 1.5px rgb(84,16,180);
-	background-image: linear-gradient(to right, rgb(84,16,180),violet,rgb(56,0,93));
+	background-image: linear-gradient(to right, rgb(84,16,180),violet,rgb(84,16,180),rgb(84,16,180),rgb(84,16,180),rgb(84,16,180),rgb(84,16,180),rgb(84,16,180),rgb(84,16,180),violet,rgb(56,0,93));
 	width: inherit;
 	height: auto;
 }
