@@ -48,7 +48,7 @@ body{
 	left: 5%;
 	border-radius: 16px;
 	position: fixed;
-	background-color: white;
+	background-image: linear-gradient(to top,white,darkgrey);
 	width: 38%;
 	height: 28%;
 }
@@ -70,7 +70,7 @@ body{
 	left: 5%;
 	border-radius: 16px;
 	position: fixed;
-	background-color: white;
+	background-image: linear-gradient(to top, white, darkgrey);
 	width: 38%;
 	height: 28%;
 }
@@ -89,8 +89,8 @@ body{
 	text-shadow: 0.5px 0.5px black;
 	padding-top: 2%;
 	padding-bottom: 2%;
-	border-top-left-radius: 16px;
-	border-top-right-radius: 16px;
+	border-top-left-radius: 14px;
+	border-top-right-radius: 14px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -111,5 +111,53 @@ body{
 	text-shadow: 1.5px 1.5px rgb(84,16,180);
 	background-image: linear-gradient(to right, rgb(84,16,180),violet,rgb(84,16,180),rgb(84,16,180),rgb(84,16,180),rgb(84,16,180),rgb(84,16,180),rgb(84,16,180),rgb(84,16,180),violet,rgb(56,0,93));
 	width: inherit;
+	height: auto;
+}
+
+#parraOne{
+	color: black;
+	text-align: center;
+	border-bottom-left-radius: 16px;
+	border-bottom-right-radius: 16px;
+	font-size: 20px;
+	position: absolute;
+	top: 25%;
+	width: 100%;
+	height: auto;
+}
+
+#parraTwo{
+	color: black;
+	text-align: center;
+	border-bottom-left-radius: 16px;
+	border-bottom-right-radius: 16px;
+	font-size: 20px;
+	position: absolute;
+	top: 25%;
+	width: 100%;
+	height: auto;
+}
+
+#parraThree{
+	color: white;
+	text-align: center;
+	border-bottom-left-radius: 16px;
+	border-bottom-right-radius: 16px;
+	font-size: 20px;
+	position: absolute;
+	top: 28%;
+	width: 100%;
+	height: auto;
+}
+
+#parraFour{
+	color: white;
+	text-align: center;
+	border-bottom-left-radius: 16px;
+	border-bottom-right-radius: 16px;
+	font-size: 20px;
+	position: absolute;
+	top: 28%;
+	width: 100%;
 	height: auto;
 }

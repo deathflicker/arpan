@@ -6,6 +6,9 @@
 	<link rel = "icon" href = "logo.gif" type = "image/x-icon">
      <link rel="stylesheet" type="text/css" href="m_dashboard.css">
 </head>
+<script type="text/javascript">
+	alert('Tap on any of the plans to select it.')
+</script>
 <body scroll="no" style="overflow: hidden">
 	<meta 
      name='viewport' 
@@ -24,42 +27,91 @@
 <!-- Main Body Lies Here -->
 <div id="bodyDivOne">
 	<!-- One Song Div -->
-	<div id="singlePrice">
+	<div onclick="planClick('single')" id="singlePrice">
 		<!-- Single Heading -->
 		<div id="singleHeading">
 			<strong style="color: white; font-size: 130%;">Single</strong>
-		</div><br><br>
-		<div id="parra">
-			
+		</div>
+		<!-- Div describing the single price -->
+		<div id="parraOne">
+			<img style="color: violet" src="mic.svg"><br>
+			1 song<br><br><br>
+			<strong style="font-size: 200%; color: rgb(84,16,180)">₹</strong><strong style="font-size: 210%; color: rgb(84,16,180)">65</strong><strong style="font-size: 20px">/song</strong>
 		</div>
 	</div>
 
 	<!-- Two Songs Div -->
-	<div id="basicPrice">
+	<div onclick="planClick('basic')" id="basicPrice">
 		<!-- Basic Heading -->
 		<div id="basicHeading">
 			<strong style="color: white; font-size: 130%;">Basic</strong>
 			<br>
 			<small style="color: darkgrey; font-family: sans-serif; text-shadow: 0px 0px">MOST POPULAR</small>
 		</div>
+		<!-- Div describing the basic price-->
+		<div id="parraThree">
+			<img src="mic2.svg">
+			<img src="mic2.svg"><br>
+			2 songs<br><br>
+			<strong style="font-size: 270%;text-shadow: rgb(84,16,180) 0.5px 0.5px;color: white">₹</strong><strong style="font-size: 280%;text-shadow: rgb(84,16,180) 0.5px 0.5px;color: white">50</strong><strong style="font-size: 20px ; color: rgb(15,3,29);">/song</strong><br>
+			<small style="color: darkgrey; font-family: Impact;">₹100 total</small>
+		</div>
 	</div>
 
 	<!-- Five Songs Div -->
-	<div id="proPrice">
+	<div onclick="planClick('pro')" id="proPrice">
 		<!-- Pro Heading -->
 		<div id="singleHeading">
 			<strong style="color: white; font-size: 130%;">Pro</strong>
 		</div>
+		<!-- Div describing the pro price -->
+		<div id="parraTwo">
+			<img style="color: violet" src="mic.svg"><img style="color: violet" src="mic.svg"><img style="color: violet" src="mic.svg"><img style="color: violet" src="mic.svg"><img style="color: violet" src="mic.svg"><br>
+			5 songs<br><br>
+			<strong style="font-size: 200%; color: rgb(84,16,180)">₹</strong><strong style="font-size: 210%; color: rgb(84,16,180)">48</strong><strong style="font-size: 20px">/song</strong><br>
+			<small style="color: grey; font-family: Impact;">₹240 total</small>
+		</div>
+		</div>
 	</div>
 
 	<!-- Ten Songs Div -->
-	<div id="extremePrice">
+	<div onclick="planClick('extreme')" id="extremePrice">
 	<!-- Basic Heading -->
 		<div id="basicHeading">
 			<strong style="color: white; font-size: 130%;">Extreme</strong><br>
 			<small style="color: darkgrey ;text-shadow: 0px 0px; font-family: sans-serif;">BEST VALUE</small>
-		</div></div>
+		</div>
+		<!-- Div describing the extreme price -->
+		<div id="parraFour">
+			<img src="mic2.svg">
+			<img src="mic2.svg">
+			<img src="mic2.svg">
+			<img src="mic2.svg">
+			<img src="mic2.svg"><br>
+			<img src="mic2.svg">
+			<img src="mic2.svg">
+			<img src="mic2.svg">
+			<img src="mic2.svg">
+			<img src="mic2.svg"><br>
+			10 songs<br><br>
+			<strong style="font-size: 270%;text-shadow: rgb(84,16,180) 0.5px 0.5px;color: white">₹</strong><strong style="font-size: 280%;text-shadow: rgb(84,16,180) 0.5px 0.5px;color: white">40</strong><strong style="font-size: 20px ; color: rgb(15,3,29);">/song</strong><br>
+			<small style="color: darkgrey; font-family: Impact;">₹400 total</small>
+		</div>
+	</div>
 </div>
 </div>
+<script type="text/javascript">
+
+	// If the screen size is less than 5.5 inches , the script fixes the heigth.
+	if(screen.height <736){
+		// One song layout fix
+		document.getElementById('parraOne').innerHTML = '<img style="color: violet" src="mic.svg"><br>1 song<br><br><strong style="font-size: 200%; color: rgb(84,16,180)">₹</strong><strong style="font-size: 210%; color: rgb(84,16,180)">65</strong><strong style="font-size: 20px">/song</strong>'
+		// Five songs layout fix
+		document.getElementById('parraTwo').innerHTML = '<img style="color: violet" src="mic.svg"><img style="color: violet" src="mic.svg"><img style="color: violet" src="mic.svg"><img style="color: violet" src="mic.svg"><img style="color: violet" src="mic.svg"><br>5 songs<br><strong style="font-size: 200%; color: rgb(84,16,180)">₹</strong><strong style="font-size: 210%; color: rgb(84,16,180)">48</strong><strong style="font-size: 20px">/song</strong><br><small style="color: grey; font-family: Impact;">₹240 total</small>'
+	document.getElementById('parraThree').innerHTML = '<img src="mic2.svg"><img src="mic2.svg"><br>2 songs<br><strong style="font-size: 220%;text-shadow: rgb(84,16,180) 0.5px 0.5px;color: white">₹</strong><strong style="font-size: 230%;text-shadow: rgb(84,16,180) 0.5px 0.5px;color: white">50</strong><strong style="font-size: 20px ; color: rgb(15,3,29);">/song</strong><br><small style="color: darkgrey; font-family: Impact;">₹100 total</small>'
+	document.getElementById('parraFour').innerHTML = '<img src="mic2.svg"><img src="mic2.svg"><img src="mic2.svg"><img src="mic2.svg"><img src="mic2.svg"><br><img src="mic2.svg"><img src="mic2.svg"><img src="mic2.svg"><img src="mic2.svg"><img src="mic2.svg"><br>10 songs<br><strong style="font-size: 230%;text-shadow: rgb(84,16,180) 0.5px 0.5px;color: white">₹</strong><strong style="font-size: 240%;text-shadow: rgb(84,16,180) 0.5px 0.5px;color: white">40</strong><strong style="font-size: 20px ; color: rgb(15,3,29);">/song</strong><br><small style="color: darkgrey; font-family: Impact;">₹400 total</small>'
+	}
+</script>
+<script type="text/javascript" src="m_mainScript.js"></script>
 </body>
 </html>
