@@ -1,0 +1,10 @@
+Plans-
+
+
+*SINGLE*(1song) -> Rs.50/song	*[total = Rs.50]*
+
+*BASIC*(2songs) -> Rs.40/song 	*[total = Rs.80]*
+
+*PRO*(5songs) -> Rs.35/song 	*[total = Rs. 175]*
+
+*EXTREME*(10songs) -> Rs.20/song	*[total = Rs. 200]*

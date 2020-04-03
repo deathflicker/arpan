@@ -5,23 +5,24 @@
 	<link rel = "icon" href =  
 "logo.gif" 
         type = "image/x-icon">
-<style type="text/css">
-	body{
-		display: flex;
-		text-align: center;
-		align-items: center;
-		justify-content: center;
-		vertical-align: middle;
-	}
-</style> 
 </head>
-<body>
-<p><a onclick="myFunction()" style="font-size: 400px; cursor: pointer;">⚠️</a></p>
-</body>
+<body scroll="no" style="overflow: hidden">
+	<meta 
+     name='viewport' 
+     content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' 
+/>
+  <script type="text/javascript">
+    if(navigator.userAgent.includes('Android') || navigator.userAgent.includes('iPhone') || navigator.userAgent.includes('BB')){
+    	window.location.href='m_dashboard.html';
+    }
+    else{
+    	alert('Unknown Device.');
+    }
+  </script>
+<p style="font-size: 50pt; text-align: center; position: fixed; top: 25%;" id="areaText">Checking Browser...</p>
 
 <script>
-	function myFunction(){
-		alert('This Page is Under Construction.')
-	}
+  document.getElementById('areaText').innerHTML='Your device is not supported. Please visit this link (www.mr-nanu.gq) from a mobile browser';
 </script>
+</body>
 </html>
