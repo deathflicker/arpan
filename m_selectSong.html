@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Select</title>
+	<!-- Title Icon Resides Here -->
+	<link rel = "icon" href = "logo.gif" type = "image/x-icon">
+	<link rel="stylesheet" type="text/css" href="m_selectSong.css">
+</head>
+<body  scroll="no" style="overflow-x: hidden">
+	<meta 
+     name='viewport' 
+     content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+
+<!-- Here Lies The Heading -->
+<div id="heading">
+	<div id="headingLeft">
+		Selection |
+	</div>
+	<div id="headingMiddle">
+		Song Name
+	</div>
+</div>
+
+<!-- It is the footer or the search div -->
+<div id="searchDiv">
+	🔍
+</div>
+
+
+
+<!-- Background Blur after max reached -->
+<div id="blurDiv">
+	<div id="cart">
+		<label style="font-size: 150%; background-color: yellow; color: darkred;">&nbsp&nbspCart&nbsp&nbsp</label><br><hr style="width: 80%;">
+
+		<!-- Selected Song One -->
+		<div class="allDiscard">
+			<input style="display: none;" id="discard1" type="text" readonly>
+			<button onclick="clearSelected(1)" style="display: none;" id="discard1btn">X</button>
+		</div><br>
+		
+
+		<!-- Selected Song Two -->
+		<div class="allDiscard">
+			<input style="display: none;" id="discard2" type="text" readonly>
+			<button onclick="clearSelected(2)" style="display: none;" id="discard2btn">X</button>
+		</div><br><br>
+		
+
+		<!-- Selected Song Three -->
+		<div class="allDiscard">
+			<input style="display: none;" id="discard3" type="text" readonly>
+			<button onclick="clearSelected(3)" style="display: none;" id="discard3btn">X</button>
+		</div><br>
+
+
+		<!-- Selected Song Four -->
+		<div class="allDiscard">
+			<input style="display: none;" id="discard4" type="text" readonly>
+			<button onclick="clearSelected(4)" style="display: none;" id="discard4btn">X</button>
+		</div><br><br>
+		
+
+		<!-- Selected Song Five -->
+		<div class="allDiscard">
+			<input style="display: none;" id="discard5" type="text" readonly>
+			<button onclick="clearSelected(5)" style="display: none;" id="discard5btn">X</button>
+		</div><br>
+		
+
+		<!-- Selected Song Six -->
+		<div class="allDiscard">
+			<input style="display: none;" id="discard6" type="text" readonly>
+			<button onclick="clearSelected(6)" style="display: none;" id="discard6btn">X</button>
+		</div><br><br>
+
+
+		<!-- Selected Song Seven -->
+		<div class="allDiscard">
+			<input style="display: none;" id="discard7" type="text" readonly>
+			<button onclick="clearSelected(7)" style="display: none;" id="discard7btn">X</button>
+		</div><br>
+
+
+		<!-- Selected Song Eight -->
+		<div class="allDiscard">
+			<input style="display: none;" id="discard8" type="text" readonly>
+			<button onclick="clearSelected(8)" style="display: none;" id="discard8btn">X</button>
+		</div><br><br>
+
+
+		<!-- Selected Song Nine -->
+		<div class="allDiscard">
+			<input style="display: none;" id="discard9" type="text" readonly>
+			<button onclick="clearSelected(9)" style="display: none;" id="discard9btn">X</button>
+		</div><br>
+		
+
+		<!-- Selected Song Ten -->
+		<div class="allDiscard">
+			<input style="display: none;" id="discard10" type="text" readonly>
+			<button onclick="clearSelected(10)" style="display: none;" id="discard10btn">X</button>
+		</div><br>
+
+
+
+		<!-- Saves the current unselection and hides cart div OR undo unselection-->
+		<div id="saveUndoDiv">
+			<button onclick="saveFunction()">Save</button>
+		</div>
+
+		<div id="takePayment">
+			<button onclick="takePayment()">Proceed</button>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- Songs Div -->
+<div id="songsDiv">
+
+	<!-- SONG 1-->
+	<br><br>
+	<div class="container">
+		<input type="radio" id="1" onchange="selectFunction(1)" name="">
+		<img style="height: 5%; width: 5%;" src="song.gif">
+		<label id="name1">Rangabati - Coke Studio @MTV Season 4</label>
+	</div><br>
+
+	<!-- SONG 2-->
+	<div class="container">
+		<input type="radio" id="2" onchange="selectFunction(2)" name="">
+		<img style="height: 5%; width: 5%;" src="song.gif">
+		<label id="name2">Moner Manush - Coke Studio @MTV Season 4</label>
+	</div><br>
+
+	<!-- SONG 3-->
+	<div class="container">
+		<input type="radio" id="3" onchange="selectFunction(3)" name="">
+		<img style="height: 5%; width: 5%;" src="song.gif">
+		<label id="name3">Arijit Singh GIMA Awards 2017</label>
+	</div><br>
+
+	<!-- SONG 4-->
+	<div class="container">
+		<input type="radio" id="4" onchange="selectFunction(4)" name="">
+		<img style="height: 5%; width: 5%;" src="song.gif">
+		<label id="name4">Agar Tum Saath Ho - Coke Studio</label>
+	</div><br>
+
+	<!-- SONG 5-->
+	<div class="container">
+		<input type="radio" id="5" onchange="selectFunction(5)" name="">
+		<img style="height: 5%; width: 5%;" src="song.gif">
+		<label id="name5">Tajdar-E-Haram - Coke Studio</label>
+	</div><br>
+
+	<!-- SONG 6-->
+	<div class="container">
+		<input type="radio" id="6" onchange="selectFunction(6)" name="">
+		<img style="height: 5%; width: 5%;" src="song.gif">
+		<label id="name6">Tauba - Coke Studio @MTV Season 3</label>
+	</div><br>
+
+	<!-- SONG 7-->
+	<div class="container">
+		<input type="radio" id="7" onchange="selectFunction(7)" name="">
+		<img style="height: 5%; width: 5%;" src="song.gif">
+		<label id="name7">Mera Mann / Yahin Hoon Main - Ayushmann Khurrana</label>
+	</div><br>
+
+	<!-- SONG 8-->
+	<div class="container">
+		<input type="radio" id="8" onchange="selectFunction(8)" name="">
+		<img style="height: 5%; width: 5%;" src="song.gif">
+		<label id="name8">Jagao Mere Des Ko - Coke Studio @MTV Season 4</label>
+	</div><br>
+
+	<!-- SONG 9-->
+	<div class="container">
+		<input type="radio" id="9" onchange="selectFunction(9)" name="">
+		<img style="height: 5%; width: 5%;" src="song.gif">
+		<label id="name9">Kaise Mujhe / Tum Ho - Palak Muchchal | Aditya Narayan</label>
+	</div><br>
+
+	<!-- SONG 10-->
+	<div class="container">
+		<input type="radio" id="10" onchange="selectFunction(10)" name="">
+		<img style="height: 5%; width: 5%;" src="song.gif">
+		<label id="name10">Tumi Robe Nirobe - Sanam Puri</label>
+	</div><br>
+
+	<!-- SONG 11-->
+	<div class="container">
+		<input type="radio" id="11" onchange="selectFunction(11)" name="">
+		<img style="height: 5%; width: 5%;" src="song.gif">
+		<label id="name11">Tor Sathe - Generation Ami</label>
+	</div><br>
+
+	<!-- SONG 12-->
+	<div class="container">
+		<input type="radio" id="12" onchange="selectFunction(12)" name="">
+		<img style="height: 5%; width: 5%;" src="song.gif">
+		<label id="name12">Tera Wo Pyar - Coke Studio Season 9</label>
+	</div><br>
+
+	<!-- SONG 13-->
+	<div class="container">
+		<input type="radio" id="13" onchange="selectFunction(13)" name="">
+		<img style="height: 5%; width: 5%;" src="song.gif">
+		<label id="name13">Sundori Komola - Coke Studio @MTV Season 3</label>
+	</div><br>
+
+	<!-- SONG 14-->
+	<div class="container">
+		<input type="radio" id="14" onchange="selectFunction(14)" name="">
+		<img style="height: 5%; width: 5%;" src="song.gif">
+		<label id="name14">Hoyni Alap - Debdeep (ROOF CONCERT)</label>
+	</div><br>
+
+	<!-- SONG 15-->
+	<div class="container">
+		<input type="radio" id="15" onchange="selectFunction(15)" name="">
+		<img style="height: 5%; width: 5%;" src="song.gif">
+		<label id="name15">Bioscope er Nesha - Bappa Mazumder (Folk Studio)</label>
+	</div><br>
+
+	<!-- SONG 16-->
+	<div class="container">
+		<input type="radio" id="16" onchange="selectFunction(16)" name="">
+		<img style="height: 5%; width: 5%;" src="song.gif">
+		<label id="name16">Dua - Arijit Singh @MTV Unplugged</label>
+	</div><br><br>
+
+</div>
+
+</div>
+
+
+
+<!-- LINK JAVASCRIPT FILE -->
+<script type="text/javascript" src="m_mainScript.js"></script>
+</body>
+</html>
