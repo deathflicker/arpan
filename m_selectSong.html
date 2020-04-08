@@ -6,6 +6,11 @@
 	<link rel = "icon" href = "logo.gif" type = "image/x-icon">
 	<link rel="stylesheet" type="text/css" href="m_selectSong.css">
 </head>
+<script type="text/javascript">
+	if(localStorage.getItem("nOfSongs")==0){
+		window.location.href="m_dashboard.html";
+	}
+</script>
 <body  scroll="no" style="overflow-x: hidden">
 	<meta 
      name='viewport' 
@@ -14,7 +19,8 @@
 <!-- Here Lies The Heading -->
 <div id="heading">
 	<div id="headingLeft">
-		Selection |
+		Select (
+		<label id="selectedNumber">0</label> )&nbsp&nbsp|
 	</div>
 	<div id="headingMiddle">
 		Song Name
@@ -22,8 +28,14 @@
 </div>
 
 <!-- It is the footer or the search div -->
-<div id="searchDiv">
+<div id="searchDiv" onclick="searchFunction()">
 	🔍
+</div>
+
+
+<!-- It closes the search div-->
+<div id="closeSearch" onclick="closeSearch()">
+	BACK
 </div>
 
 
@@ -112,6 +124,11 @@
 		<div id="takePayment">
 			<button onclick="takePayment()">Proceed</button>
 		</div>
+		<div id="changePlan">
+			<button onclick="changePlan()">
+				Change Plan
+			</button>			
+		</div>
 	</div>
 </div>
 
@@ -122,112 +139,112 @@
 
 	<!-- SONG 1-->
 	<br><br>
-	<div class="container">
+	<div class="container" id="container1">
 		<input type="radio" id="1" onchange="selectFunction(1)" name="">
 		<img style="height: 5%; width: 5%;" src="song.gif">
 		<label id="name1">Rangabati - Coke Studio @MTV Season 4</label>
 	</div><br>
 
 	<!-- SONG 2-->
-	<div class="container">
+	<div class="container" id="container2">
 		<input type="radio" id="2" onchange="selectFunction(2)" name="">
 		<img style="height: 5%; width: 5%;" src="song.gif">
 		<label id="name2">Moner Manush - Coke Studio @MTV Season 4</label>
 	</div><br>
 
 	<!-- SONG 3-->
-	<div class="container">
+	<div class="container" id="container3">
 		<input type="radio" id="3" onchange="selectFunction(3)" name="">
 		<img style="height: 5%; width: 5%;" src="song.gif">
 		<label id="name3">Arijit Singh GIMA Awards 2017</label>
 	</div><br>
 
 	<!-- SONG 4-->
-	<div class="container">
+	<div class="container" id="container4">
 		<input type="radio" id="4" onchange="selectFunction(4)" name="">
 		<img style="height: 5%; width: 5%;" src="song.gif">
 		<label id="name4">Agar Tum Saath Ho - Coke Studio</label>
 	</div><br>
 
 	<!-- SONG 5-->
-	<div class="container">
+	<div class="container" id="container5">
 		<input type="radio" id="5" onchange="selectFunction(5)" name="">
 		<img style="height: 5%; width: 5%;" src="song.gif">
 		<label id="name5">Tajdar-E-Haram - Coke Studio</label>
 	</div><br>
 
 	<!-- SONG 6-->
-	<div class="container">
+	<div class="container" id="container6">
 		<input type="radio" id="6" onchange="selectFunction(6)" name="">
 		<img style="height: 5%; width: 5%;" src="song.gif">
 		<label id="name6">Tauba - Coke Studio @MTV Season 3</label>
 	</div><br>
 
 	<!-- SONG 7-->
-	<div class="container">
+	<div class="container" id="container7">
 		<input type="radio" id="7" onchange="selectFunction(7)" name="">
 		<img style="height: 5%; width: 5%;" src="song.gif">
 		<label id="name7">Mera Mann / Yahin Hoon Main - Ayushmann Khurrana</label>
 	</div><br>
 
 	<!-- SONG 8-->
-	<div class="container">
+	<div class="container" id="container8">
 		<input type="radio" id="8" onchange="selectFunction(8)" name="">
 		<img style="height: 5%; width: 5%;" src="song.gif">
 		<label id="name8">Jagao Mere Des Ko - Coke Studio @MTV Season 4</label>
 	</div><br>
 
 	<!-- SONG 9-->
-	<div class="container">
+	<div class="container" id="container9">
 		<input type="radio" id="9" onchange="selectFunction(9)" name="">
 		<img style="height: 5%; width: 5%;" src="song.gif">
 		<label id="name9">Kaise Mujhe / Tum Ho - Palak Muchchal | Aditya Narayan</label>
 	</div><br>
 
 	<!-- SONG 10-->
-	<div class="container">
+	<div class="container" id="container10">
 		<input type="radio" id="10" onchange="selectFunction(10)" name="">
 		<img style="height: 5%; width: 5%;" src="song.gif">
 		<label id="name10">Tumi Robe Nirobe - Sanam Puri</label>
 	</div><br>
 
 	<!-- SONG 11-->
-	<div class="container">
+	<div class="container" id="container11">
 		<input type="radio" id="11" onchange="selectFunction(11)" name="">
 		<img style="height: 5%; width: 5%;" src="song.gif">
 		<label id="name11">Tor Sathe - Generation Ami</label>
 	</div><br>
 
 	<!-- SONG 12-->
-	<div class="container">
+	<div class="container" id="container12">
 		<input type="radio" id="12" onchange="selectFunction(12)" name="">
 		<img style="height: 5%; width: 5%;" src="song.gif">
 		<label id="name12">Tera Wo Pyar - Coke Studio Season 9</label>
 	</div><br>
 
 	<!-- SONG 13-->
-	<div class="container">
+	<div class="container" id="container13">
 		<input type="radio" id="13" onchange="selectFunction(13)" name="">
 		<img style="height: 5%; width: 5%;" src="song.gif">
 		<label id="name13">Sundori Komola - Coke Studio @MTV Season 3</label>
 	</div><br>
 
 	<!-- SONG 14-->
-	<div class="container">
+	<div class="container" id="container14">
 		<input type="radio" id="14" onchange="selectFunction(14)" name="">
 		<img style="height: 5%; width: 5%;" src="song.gif">
 		<label id="name14">Hoyni Alap - Debdeep (ROOF CONCERT)</label>
 	</div><br>
 
 	<!-- SONG 15-->
-	<div class="container">
+	<div class="container" id="container15">
 		<input type="radio" id="15" onchange="selectFunction(15)" name="">
 		<img style="height: 5%; width: 5%;" src="song.gif">
 		<label id="name15">Bioscope er Nesha - Bappa Mazumder (Folk Studio)</label>
 	</div><br>
 
 	<!-- SONG 16-->
-	<div class="container">
+	<div class="container" id="container16">
 		<input type="radio" id="16" onchange="selectFunction(16)" name="">
 		<img style="height: 5%; width: 5%;" src="song.gif">
 		<label id="name16">Dua - Arijit Singh @MTV Unplugged</label>
@@ -235,6 +252,75 @@
 
 </div>
 
+</div>
+
+
+
+
+
+
+<!-- PAYMENT PAGE HTML -->
+<div id="pBody">
+
+	<!-- Payment Page Heading Lies Here -->
+	<div id="pHeading">
+		<label>PAYMENT</label>
+	</div>
+
+	<!-- Payment Page Main Body Lies Here -->
+	<div id="pMain">
+
+		<!-- Payment Methods -->
+		<div id="pMethods">
+			<!-- PAYTM -->
+			<div id="method">
+				<input type="radio" onchange="paymentType('PayTm')" name="method">
+				<label>&nbsp&nbsp-PayTm</label>
+			</div>
+			<!-- GOOGLE PAY -->
+			<div id="method">
+				<input type="radio" onchange="paymentType('Google Pay')" name="method">
+				<label>&nbsp&nbsp-Google Pay</label>
+			</div>
+			<!-- PHONE PE -->
+			<div id="method">
+				<input type="radio" onchange="paymentType('PhonePe')" name="method">
+				<label>&nbsp&nbsp-PhonePe</label>
+			</div>
+			<!-- AMAZON PAY-->
+			<div id="method">
+				<input type="radio" onchange="paymentType('Amazon Pay')" name="method">
+				<label>&nbsp&nbsp-Amazon Pay</label>
+			</div>
+			<!-- PAYPAL -->
+			<div id="method">
+				<input type="radio" onchange="paymentType('Paypal')" name="method">
+				<label>&nbsp&nbsp-Paypal</label>
+			</div>
+			<!-- NET BANKING-->
+			<div style="border-bottom-color: white;" id="method">
+				<input type="radio" onchange="paymentType('Net Banking')" name="method">
+				<label>&nbsp&nbsp-Net Banking</label><br>
+			</div>
+
+			<!-- Total Billing Amount -->
+			<div id="pTotal">
+				<label id="totalMoney">Total - </label>
+			</div><br>
+
+			<!-- NOTE -->
+			<div id="pNote">
+				<label>Note: You will recieve the karaoke only when the payments are cleared.<br><a  style="color: darkviolet;">(It may take upto 2hrs)</a></label>
+			</div>	
+		</div>
+		
+
+		<!-- Payment Page Footer Lies Here -->
+		<div id="pFooter">
+			<!-- Confirm Transaction Button -->
+			<button id="confirmBtn" onclick="confirmSub()" style="font-size: 150%; background-image: linear-gradient(darkgreen,limegreen);color: white; border: none; padding: 2%; border-radius: 16px; display: none;">Confirm</button>
+		</div>
+	</div>
 </div>
 
 
