@@ -233,7 +233,7 @@ body{
 
 #pMethods{
 	padding: 5%;
-	top: 20%;
+	top: 15%;
 	background-color: white;
 	width: 80%;
 	height: auto;
@@ -291,8 +291,17 @@ body{
 	justify-content: center;
 	padding: 2%;
 	position: fixed;
-	bottom: 0%;
+	bottom: 2.5%;
 	left: 0%;
 	width: 100%;
 	height: auto;
+}
+
+#termsDiv{
+	display: none;
+	color: lightblue;
+	position: fixed;
+	width: 100%;
+	justify-content: center;
+	bottom: 0.2%;
 }

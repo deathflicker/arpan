@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Select</title>
+	<title>araokes</title>
 	<!-- Title Icon Resides Here -->
 	<link rel = "icon" href = "logo.gif" type = "image/x-icon">
 	<link rel="stylesheet" type="text/css" href="m_selectSong.css">
@@ -278,29 +278,9 @@
 				<label>&nbsp&nbsp-PayTm</label>
 			</div>
 			<!-- GOOGLE PAY -->
-			<div id="method">
+			<div id="method" style="border: none;">
 				<input type="radio" onchange="paymentType('Google Pay')" name="method">
-				<label>&nbsp&nbsp-Google Pay</label>
-			</div>
-			<!-- PHONE PE -->
-			<div id="method">
-				<input type="radio" onchange="paymentType('PhonePe')" name="method">
-				<label>&nbsp&nbsp-PhonePe</label>
-			</div>
-			<!-- AMAZON PAY-->
-			<div id="method">
-				<input type="radio" onchange="paymentType('Amazon Pay')" name="method">
-				<label>&nbsp&nbsp-Amazon Pay</label>
-			</div>
-			<!-- PAYPAL -->
-			<div id="method">
-				<input type="radio" onchange="paymentType('Paypal')" name="method">
-				<label>&nbsp&nbsp-Paypal</label>
-			</div>
-			<!-- NET BANKING-->
-			<div style="border-bottom-color: white;" id="method">
-				<input type="radio" onchange="paymentType('Net Banking')" name="method">
-				<label>&nbsp&nbsp-Net Banking</label><br>
+				<label>&nbsp&nbsp-Google Pay</label><br><br><br>
 			</div>
 
 			<!-- Total Billing Amount -->
@@ -310,15 +290,19 @@
 
 			<!-- NOTE -->
 			<div id="pNote">
-				<label>Note: You will recieve the karaoke only when the payments are cleared.<br><a  style="color: darkviolet;">(It may take upto 2hrs)</a></label>
-			</div>	
+				<label>Note: You will recieve the karaoke only when the payments are cleared.<br><a  style="color: darkviolet;">(If you <strong>don't recieve</strong> the Karaoke within 24hrs, the money will be <strong>refunded</strong>.<br>Please read our terms & conditions before proceeding.)</a></label>
+			</div><br>
+			<input id="termsCheck" type="checkbox" checked name="" onchange="termsCheckFunc()">	<label>I agree to the terms and conditions.</label>
 		</div>
-		
 
+		
 		<!-- Payment Page Footer Lies Here -->
 		<div id="pFooter">
 			<!-- Confirm Transaction Button -->
 			<button id="confirmBtn" onclick="confirmSub()" style="font-size: 150%; background-image: linear-gradient(darkgreen,limegreen);color: white; border: none; padding: 2%; border-radius: 16px; display: none;">Confirm</button>
+		</div>
+		<div id="termsDiv">
+			<a onclick="termsPage()"><u>Terms</u> & <u>Conditions</u></a>
 		</div>
 	</div>
 </div>

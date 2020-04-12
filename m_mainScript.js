@@ -162,7 +162,7 @@ function searchFunction(){
 			document.getElementById("searchDiv").style.display = "block";
 			alert("Oops, No Results Found.");
 			if(confirm('Would you like to contact the developer for the song\n"'+query+'" ?')){
-				window.location.href="https://api.whatsapp.com/send?phone=919123043563&text=Do%20you%20have%20Karaoke%20for%20the%20song%20*"+query+"* ?";
+				window.location.href="https://api.whatsapp.com/send?phone=919433792313&text=Do%20you%20have%20Karaoke%20for%20the%20song%20*"+query+"* ?";
 			}
 			else{
 				console.warn("Canceled");
@@ -232,19 +232,49 @@ function takePayment(){
 	document.getElementById("blurDiv").style.display="none";
 	document.getElementById("songsDiv").style.display="none";
 	document.getElementById('pBody').style.display='block';
-
+	console.warn("PAYMENT PAGE");
+	document.getElementById('saveUndoDiv').style.display='none';
+	document.getElementById('takePayment').style.display='block';
+	document.getElementById('blurDiv').style.display='none';
+	localStorage.setItem('nOfSongs',0);
 }
 
 // Choose mode of payment
 function paymentType(mofPayment){
+	document.getElementById("termsDiv").style.display="flex";
 	type = mofPayment;
-	document.getElementById('confirmBtn').style.display='block';
+	if(document.getElementById("termsCheck").checked != false){
+		document.getElementById('confirmBtn').style.display='block';
+	}
+	else{
+		document.getElementById('confirmBtn').style.display='none';
+	}
 }
 
 
 //Confirm Submission
 function confirmSub(){
-	alert("After paying the fee take a Screen Shot\nand share it with us to verify the\nTRANSACTION ID.");
-	//console.log(songsDB.toString());
-	window.location.href="https://api.whatsapp.com/send?phone=919123043563&text=plan%20-%0D%0A%0D%0A%20*"+planselect+"*%0D%0A%0D%0Atotal%20amount%20-%0D%0A%0D%0A%20*"+price+"/-*%0D%0A%0D%0Amode%20of%20payment%20-%0D%0A%0D%0A%20*"+type+"*";
+	alert("Please wait... redirecting to WhatsApp..");
+	allsong = songsDB.toString().replace(',','%0D%0A').replace(' ','%20');
+	console.log(allsong);
+	window.location.href="https://api.whatsapp.com/send?phone=919433792313&text=songs%20-%0D%0A%20*"+allsong+"*%0D%0A%0D%0Aplan%20-%0D%0A%20*"+planselect+"*%0D%0A%0D%0Atotal%20amount%20-%0D%0A%20*"+price+"/-*%0D%0A%0D%0Amode%20of%20payment%20-%0D%0A%20*"+type+"*";
+}
+
+
+//Terms and Conditions
+function termsPage(){
+	alert("--Terms and Conditions--\n\n 1) You won't receive any refund after the Karaoke has been successfully delivered to you.\n 2) If we can't verify that the payment was made by you then no Karaoke or as such will be sent until you verify your payment.\n 3) If your transaction was through GOOGLE PAY, we will not be able to refund your money.\n 3) We are not responsible for any transaction issues. Please contact your bank or "+type+" for further assistance.")
+}
+
+
+
+
+//Terms and Conditions check function
+function termsCheckFunc(){
+	if(document.getElementById('termsCheck').checked==true){
+		document.getElementById('confirmBtn').style.display='block';
+	}
+	else{
+		document.getElementById('confirmBtn').style.display='none';
+	}
 }
